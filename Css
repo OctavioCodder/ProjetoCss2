@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    background: #181D31;
+}
+
+.caixa{
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    background: #678983;
+    margin: 40px;
+    box-shadow: 25px 25px 0 #27374D;
+}
+
+.corpo{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 340px;
+    height: 180px;
+    background: #19A7CE;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    z-index: 9;
+    overflow: hidden;
+}
+
+.caixa:nth-child(2) .corpo{
+    background: #B20600;
+}
+
+.corpo::before{
+    content: '';
+    position: absolute;
+    top: 90px;
+    left: 97px;
+    width: 23px;
+    height: 23px;
+    background: #000;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.corpo::after{
+    content: '';
+    position: absolute;
+    top: 90px;
+    right: 97px;
+    width: 23px;
+    height: 23px;
+    background: #000;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.corpo span{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 100px;
+    background-color: #454545;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.corpo span::before{
+    content: '';
+    position: absolute;
+    top: -90px;
+    left: 10px;
+    width: 30px;
+    height: 100px;
+    background-color: #454545;
+    transform: rotate(345deg);
+}
+
+.corpo span::after{
+    content: '';
+    position: absolute;
+    top: -90px;
+    right: 10px;
+    width: 30px;
+    height: 100px;
+    background-color: #454545;
+    transform: rotate(15deg);
+}
+
+.caixa:nth-child(2) .corpo span,
+.caixa:nth-child(2) .corpo span::before,
+.caixa:nth-child(2) .corpo span::after{
+    background: #DDDDDD;
+}
+
+.pescoco{
+    position: absolute;
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 100px;
+    background: #F2B6A0;
+    z-index: 10;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.pescoco::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background: linear-gradient(#000),transparent;
+}
+
+.cara{
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 180px;
+    background: #F2B6A0;
+    border-radius: 50%;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+    z-index: 12;
+}
+
+.olhos{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+}
+
+.olhos .olho{
+    position: relative;
+    width: 45px;
+    height: 45px;
+}
+
+.olhos .olho::before{
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: transparent;
+    border-radius: 30%;
+    box-shadow: 0 -3px 0 #000;
+}
+
+.olhos .olho i{
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.olhos .olho i::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #1F8A70;
+    transform: translate(-10px, 2px);
+}
+
+.boca{
+    position: absolute;
+    bottom: 30px;
+    left: 40%;
+    transform: translateX(-20%);
+    width: 60px;
+    height: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: #ED2B2A;
+    box-shadow: inset 0 10px 0 #F9F5EB;
+    border: 3px solid #333;
+    transition: 0.6s;
+}
+
+.cara:hover .boca{
+    height: 15px;
+    width: 70px;
+    bottom: 40px;
+    box-shadow: inset 0 10px 0 #ED2B2A;
+    border-radius: 10px;
+}
+
+.cara:hover{
+    cursor: pointer;
+}
+
+.cabelo{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 230px;
+    height: 450px;
+    background: #212;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+}
+
+.caixa:nth-child(2) .cabelo{
+    bottom: 200px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+
+
